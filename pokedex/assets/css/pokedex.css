@@ -16,7 +16,7 @@
   background-color: #6890f0;
 }
 .grass { 
-  background-color: #78c850;
+  background-color: #49d0b0;
 }
 .electric { 
   background-color: #f8d030;
@@ -69,6 +69,11 @@
   /* height: 100px; */
   display: flex;
   flex-direction: column;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+}
+
+.pokemon:hover {
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
 }
 
 .pokemon .name {
@@ -112,6 +117,11 @@
   align-self: flex-end;
 }
 
+.pokemon .detail img:hover {
+  -webkit-transform: scale(1.3);
+	transform: scale(1.3);
+}
+
 .pagination {
   display: flex;
   flex-direction: row;
@@ -128,6 +138,104 @@
   padding: .25rem .5rem;
   margin: .25rem 0;
   font-size: .625rem;
+}
+
+.card {
+  /* Add shadows to create the "card" effect */
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  transition: 0.3s;
+  border-radius: 1rem;
+  //filter: brightness(1.1);
+}
+
+/* On mouse-over, add a deeper shadow */
+/* .card:hover {
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+} */
+
+/* Add some padding inside the card container */
+.container {
+  //position: relative;
+  /* bottom: 2em; */
+  padding: 2px 16px;
+  color: #fff;
+  height: 200px;
+}
+
+.pokemonName {
+  text-transform: capitalize;
+  color: #fff;
+  font-size: 1.75rem;
+  margin-left: 2.5rem;
+  margin-bottom: 0;
+}
+
+.container .typesDetail .typeDetail {
+  list-style: none;
+  color: #ffff;
+  padding: 0.25rem 0.5rem;
+  font-size: .825rem;
+  border-radius: 1rem;
+  margin: 0.25rem 0;
+  filter: brightness(1.1);
+  text-align: center;
+}
+
+.container .typesDetail {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.down img {
+  max-width: 100%;
+  height: 150px;
+}
+
+.pokemonPhoto {
+  display: block;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    top: -2em;
+    -webkit-filter: drop-shadow(4px 4px 4px rgba(0,0,0,0.2));
+    filter: drop-shadow(4px 4px 4px rgba(0,0,0,0.2));
+}
+
+.down {
+  position: relative;
+  top: -2em;
+  background-color: #ffff;
+  width: 100%;
+  border-radius: 1rem;
+  //color: #fff;
+  padding: 2px 16px;
+  box-shadow: 0px 4px 0px 0px rgba(0,0,0,0.2);
+  transition: 0.3s;
+}
+
+.text {
+  margin-left: 15px;
+  font-weight: lighter;
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0,0,0,0.4);
+}
+
+.teste {
+  width: 50%;
+  margin: auto;
+  margin-top: 10%;
 }
 
 @media screen and (min-width: 380px) {
