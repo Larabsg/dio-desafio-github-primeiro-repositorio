@@ -1,4 +1,5 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 import { Button } from "../Button";
 import logo from "../../assets/logo.png";
 import {
@@ -14,6 +15,16 @@ import {
 import { IHeader } from "./types";
 
 const Header = ({ autenticado }: IHeader) => {
+    const navigate = useNavigate()
+
+    const handleClickSignUp = () => {
+        navigate("/cadastro")
+    }
+
+    const handleClickHome = () => {
+        navigate("/")
+    }
+    
     return (
         <Wrapper>
             <Container>
@@ -34,9 +45,9 @@ const Header = ({ autenticado }: IHeader) => {
                         <UserPicture src="https://avatars.githubusercontent.com/u/69206910?v=4" />
                     ) : (
                         <>
-                            <MenuRight href="#">Home</MenuRight>
+                            <MenuRight href="#" onClick={handleClickHome}>Home</MenuRight>
                             <Button title="Entrar" />
-                            <Button title="Cadastrar" />
+                            <Button onClick={handleClickSignUp} title="Cadastrar" />
                         </>
                     )}
                 </Row>
